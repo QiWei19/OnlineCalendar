@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+        <meta charset="utf-8">
+		<title> This is a calendar </title>
+		<link rel="stylesheet" type="text/css" href="cc.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
+        <script src="http://classes.engineering.wustl.edu/cse330/content/calendar.min.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+        <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+		<script src="functions.js"></script>
+	</head>
+	<body>
+		<div id="main">
+		<div class= "login">
+			<p class="before_login">
+                <input type = "text" id ="username" placeholder="UserName"/>
+                <input type = "password" id="password" placeholder="Password"/>
+                <button id="login_button">Log In</button>
+                <button id="register_button">Register</button>
+			</p>
+            <p class="after_login" hidden>
+                <label id="showName"></label>
+                <button id="logout">Logout</button>
+            </p>
+		</div>			
+		<script type="text/javascript" src="login.js"></script>
+		<script type="text/javascript" src="register.js"></script>
+        <script type="text/javascript" src="logout.js"></script>
+		<p id="pre_next">
+			<button id="pre_month_btn">previous month</button>
+			<button id="next_month_btn">next month</button>
+		</p>
+        <div id="month"></div>
+        <table id="calendar"></table>
+        <br><br>
+		<div id="tags"> </div>
+		<div id="share"></div>
+    
+        <div id="CreateEventDialog" title="Create Event">
+            <label id ="date"></label><br>
+            <label>time</label><input type = "text" id ="time" placeholder="00:00"/><br>
+            <label>title</label><input type = "text" id ="title" placeholder="Title"/><br>
+            <label>tag</label><input type = "text" id ="tag" placeholder="tag"/><br>
+			<label>share</label><input type = "text" id = "group" placeholder="seperate by ','" /><br>
+            <button id="createNewEvent">create new event</button>
+        </div>
+		
+		<div id="EditEventDialog" title="Edit Event">
+			<input type="hidden" id="editId" />
+            <label>date</label><input type = "text" id ="editDate" placeholder="1900-01-01" /><br>
+            <label>time</label><input type = "text" id ="editTime" placeholder="00:00" /><br>
+            <label>title</label><input type = "text" id ="editTitle" placeholder="Title" /><br>
+            <label>tag</label><input type = "text" id ="editTag" placeholder="tag" /><br>
+            <button id="editEvent">edit</button>
+			<button id="deleteEvent">delete</button>
+        </div>
+    
+		<!-- comment-->
+		<script type="text/javascript" src="calendar.js"></script>
+		</div>
+	</body>
+</html>
