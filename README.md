@@ -1,5 +1,5 @@
 # OnlineCalendar
-This an online calendar.
+This a web application of calendar.
 
 Users can register and log in.
 
