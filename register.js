@@ -5,15 +5,9 @@ function register(event) {
            {username:username, password: password},
            function(data){
                 if (data.success) {
-                    alert("111");
-                    $(".after_login").show();
-                    $("#showName").html(username);
-                    alert("222");
-                    $(".before_login").hide();
-                    alert("333");
-                    token = data.token;
-                    updateCalendar();
-                    alert("444");
+                    alert("success");
+                    //token = data.token;
+                    //updateCalendar();
                 }else{
                     alert("Register failed." + data.message);
                 }

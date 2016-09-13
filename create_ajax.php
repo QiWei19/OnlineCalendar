@@ -4,7 +4,7 @@ session_start();
 if($_SESSION['token'] != $_POST['token']){
     echo json_encode(array(
             "success" => false,
-            "message" => "Request forgery detected"+$_POST['token']+"    "+$_SESSION['token']
+            "message" => "Request forgery detected"
             ));
     exit;
 }else{
@@ -21,7 +21,6 @@ if($_SESSION['token'] != $_POST['token']){
         exit;
     }else{
         require_once('connectDB.php');
-        //Insert event to database
         $stmt = $mysqli->prepare("insert into events(user_name, title, date, tag, time) values (?, ?, ?, ?, ?)");
         if(!$stmt){
             echo json_encode(array(

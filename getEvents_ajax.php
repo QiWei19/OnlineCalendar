@@ -1,5 +1,4 @@
 <?php
-
 ini_set("session.cookie_httponly", 1);
 session_start();
 if(isset($_SESSION['token']) && $_SESSION['token'] != $_POST['token']){
@@ -12,7 +11,6 @@ if(isset($_SESSION['token']) && $_SESSION['token'] != $_POST['token']){
     if(isset($_SESSION['username'])){
         require_once('connectDB.php');
         $username = htmlentities($_SESSION['username']);
-        //Query all events of the username in current SESSION
         $stmt = $mysqli->prepare("SELECT id, title, date, time, tag FROM events WHERE user_name=?");
         if(!$stmt){
             echo json_encode(array(

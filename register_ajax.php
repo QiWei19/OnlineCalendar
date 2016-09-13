@@ -47,13 +47,12 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
                 $stmt->bind_param('ss', $userName, crypt($password));
                 $stmt->execute();
                 $stmt->close();
-                ini_set("session.cookie_httponly", 1);
-                session_start();
-                $_SESSION['user_name'] = $userName;
-                $_SESSION['token'] = substr(md5(rand()), 0, 10); // generate a 10-character random string
+                //ini_set("session.cookie_httponly", 1);
+                //session_start();
+                //$_SESSION['user_name'] = $userName;
+                //$_SESSION['token'] = substr(md5(rand()), 0, 10); // generate a 10-character random string
                 echo json_encode(array(
                 "success" => true,
-                "token" => $_SESSION['token'],
                 "message" => "Register successed!"
                 ));
                 exit;

@@ -1,0 +1,9 @@
+libojian, 441218
+qiwei, 440269
+
+For creative part, we implement the tag function.
+Users can tag an event with a particular category and enable/disable those tags in the calendar view.
+And we implement the group event function.
+When creating an event, users can include other users in this event.
+
+http://54.200.66.249/~qiwei/hw522/calendar.html
